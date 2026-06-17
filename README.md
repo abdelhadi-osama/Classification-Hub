@@ -1,122 +1,68 @@
-# 🏗️ Classification Hub — SAIR PyTorch Mastery
+# 🏗️ Classification Hub: The SAIR PyTorch Mastery Portfolio
 
-> You covered all the theory. You followed the lectures.
-> Now here are five real datasets and five real problems.
-> Build the solutions yourself.
+[![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C?style=for-the-badge&logo=pytorch)](https://pytorch.org/)
+[![HuggingFace](https://img.shields.io/badge/Transformers-HuggingFace-FFD21E?style=for-the-badge&logo=huggingface)](https://huggingface.co/)
+[![Accuracy](https://img.shields.io/badge/Status-All%20Targets%20Exceeded-brightgreen?style=for-the-badge)](https://github.com/your-username/classification-hub)
 
----
-
-## Exercises
-
-| # | Modality | Project | Dataset | Difficulty | Time Estimate |
-|---|----------|---------|---------|------------|---------------|
-| [Ex 1](Ex_1_Tabular_Classification.ipynb) | 📊 Tabular | Rice Type Classifier | [Kaggle](https://www.kaggle.com/datasets/mssmartypants/rice-type-classification) | ⭐ Easy | 3–4 hrs |
-| [Ex 2](Ex_2_Image_Classification.ipynb) | 🖼️ Image (scratch) | Animal Face Classifier | [Kaggle](https://www.kaggle.com/datasets/andrewmvd/animal-faces) | ⭐⭐ Medium | 5–7 hrs |
-| [Ex 3](Ex_3_Image_Classification_Pretrained.ipynb) | 🌿 Image (pretrained) | Bean Leaf Disease Detector | [Kaggle](https://www.kaggle.com/datasets/marquis03/bean-leaf-lesions-classification) | ⭐⭐ Medium | 5–6 hrs |
-| [Ex 4](Ex_4_Audio_Classification.ipynb) | 🎵 Audio | Quran Reciter Identifier | [Kaggle](https://www.kaggle.com/datasets/mohammedalrajeh/quran-recitations-for-audio-classification) | ⭐⭐⭐ Hard | 7–10 hrs |
-| [Ex 5](Ex_5_Text_Classification_Transformers.ipynb) | 📝 Text | Sarcasm Detector | [Kaggle](https://www.kaggle.com/datasets/rmisra/news-headlines-dataset-for-sarcasm-detection) | ⭐⭐ Medium | 5–7 hrs |
-
-> **Where to start:** Ex 1 → get familiar with the submission format. Then pick whichever modality interests you most.
+> "A comprehensive showcase of modern Deep Learning architectures applied to five diverse data modalities. From physical rice grain measurements to identifying Quranic reciters via Mel Spectrograms."
 
 ---
 
-## What Every Submission Must Include
-
-Every notebook you submit must have all of the following:
-
-- A **trained PyTorch model** that solves the stated problem
-- A **training report** — loss and accuracy curves for train and validation
-- A **final test accuracy score** on held-out data
-- A **live inference demo** — the model runs on a new real example and returns a prediction
-
-For **Ex 3 and Ex 5** you also need a written explanation (in a markdown cell)
-of your architectural decisions: what model you chose, what you froze, what you added, and why.
-
-For **Ex 4** you need a written explanation of how you converted audio into
-a format your model could process.
+## 📺 Master Project Showcase
+[![Watch the Master Demo](https://img.shields.io/badge/📽️_Master_Showcase-Play_Video-blue?style=for-the-badge&logo=youtube)](demos/Master_Classification_Hub_Demo.mp4)
+*A consolidated 60-second tour of all live inference demos in this portfolio.*
 
 ---
 
-## Target Accuracy
+## 🚀 Mission Control: Performance Dashboard
 
-These are realistic targets. Exceeding them means your implementation is strong.
-
-| Exercise | Target Accuracy | Notes |
-|----------|----------------|-------|
-| Ex 1 — Rice Classifier | ≥ 92% | Clean tabular data, should converge fast |
-| Ex 2 — Animal Faces | ≥ 75% | Building a CNN from scratch is genuinely hard |
-| Ex 3 — Bean Disease | ≥ 88% | Transfer learning makes this very achievable |
-| Ex 4 — Quran Reciter | ≥ 70% | Audio is harder; 70% is a strong result |
-| Ex 5 — Sarcasm Detector | ≥ 82% | Fine-tuned transformer should clear this easily |
+| Project | Modality | Architecture | Target | **Actual** | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Rice Type Classifier** | 📊 Tabular | 4-Layer MLP | 92% | **99.23%** | 🏆 Mastered |
+| **Animal Faces** | 🖼️ Image (Scratch) | ResNet-Style CNN | 75% | **96.47%** | 🏆 Mastered |
+| **Bean Disease Detector** | 🌿 Image (Transfer) | Fine-tuned ResNet18 | 88% | **94.74%** | 🏆 Mastered |
+| **Quran Reciter ID** | 🎙️ Audio | VGG-style Mel-CNN | 70% | **99.55%** | 🏆 Mastered |
+| **Sarcasm Detector** | 📝 Text | DistilBERT | 82% | **91.37%** | 🏆 Mastered |
 
 ---
 
-## Submission Rubric
+## 🔬 Modality Spotlights
 
-Each submission is assessed across four dimensions:
+### 📊 1. Rice Type Classifier (Tabular Data)
+**The Problem:** Automated sorting of "Cammeo" and "Osmancik" rice varieties based on physical camera measurements (area, perimeter, etc.).
+**The Solution:** Implemented a robust Deep Neural Network (MLP) with **StandardScaler** normalization. Normalizing features was critical as raw measurements (e.g., Area vs. Eccentricity) varied by orders of magnitude.
+**The Impact:** Achieved **99.23% accuracy**, nearly eliminating sorting errors.
 
-| Criterion | Full Credit | Partial Credit | Minimal Credit |
-|-----------|-------------|----------------|----------------|
-| **Model Quality** | Meets or beats target accuracy | Within 5% of target | Below target but trained correctly |
-| **Training Report** | Loss & accuracy curves, train vs. val | Curves present but incomplete | Only final score reported |
-| **Code Quality** | Clean, readable, functions/classes used | Working but unstructured | Barely working, messy |
-| **Inference Demo** | Runs on a real new example with output | Demo exists but hardcoded | No live demo |
+### 🖼️ 2. Animal Face Classifier (Custom CNN)
+**The Problem:** Categorizing wildlife images (Cat, Dog, Wild) using a model built entirely from scratch—no pretrained weights allowed.
+**The Solution:** Designed a custom CNN incorporating **Residual Blocks** and **Global Average Pooling**. This architecture prevented vanishing gradients and allowed the model to learn complex spatial features effectively.
+**The Impact:** Surpassed the 75% target to reach **96.47% accuracy**.
 
-For exercises requiring written explanations (Ex 3, Ex 4, Ex 5): the explanation must be specific — "I used ResNet-18 because it was pre-trained on ImageNet which has overlapping features with leaf disease images" is good; "I chose this model because it performs well" is not.
+### 🌿 3. Bean Leaf Disease Detector (Transfer Learning)
+**The Problem:** Detecting agricultural diseases from a very small dataset of leaf images.
+**The Solution:** Leveraged **Transfer Learning** with a pretrained **ResNet-18** backbone. By freezing the early feature-extraction layers and fine-tuning the final classification head, we transferred ImageNet knowledge to the specific domain of botany.
+**The Impact:** **94.74% accuracy**. [📽️ View Demo Video](demos/Bean%20Leaf%20Disease%20Detector.webm)
 
----
+### 🎙️ 4. Quran Reciter Identifier (Audio Classification)
+**The Problem:** Identifying unique vocal profiles in audio recordings—a task where raw waves are difficult for standard CNNs to process.
+**The Solution:** Transformed raw `.wav` files into **Mel Spectrograms** (2D time-frequency representations) using `librosa`. This allowed us to treat audio classification as an image recognition problem, applying a **VGG-style CNN** to the spectrograms.
+**The Impact:** Exceptional **99.55% accuracy** on vocal identification. [📽️ View Demo Video](demos/Quran%20Reciter%20Identifier.webm)
 
-## Relevant Lectures
-
-| Exercise | Review Before Starting |
-|----------|----------------------|
-| Ex 1 — Tabular | Module 2 pipelines; `1_Intro.ipynb`; `2_DataLoader.ipynb` |
-| Ex 2 — Image (scratch) | `3_CNN.ipynb`; `labs/lab_3.ipynb` |
-| Ex 3 — Image (pretrained) | `4_Transfer_and_ResNet.ipynb`; `labs/lab_4.ipynb` |
-| Ex 4 — Audio | `3_CNN.ipynb` (2D input logic); independent research on mel spectrograms |
-| Ex 5 — Text | `8A_HuggingFace_Ecosystem.ipynb`; `8B_Hugging_Face_Finetuning.ipynb` |
-
----
-
-## Note on Exercise 4
-
-Audio classification was not demonstrated step-by-step in the lectures.
-You are expected to research the pipeline independently.
-You have the mental model — a CNN that classifies 2D input.
-The missing piece is how to get from a `.wav` file to a 2D array.
-
-**Hint:** look into mel spectrograms (`librosa.feature.melspectrogram`). Once you have a 2D array, the rest is a standard image classification pipeline.
+### 📝 5. Sarcasm Detector (NLP Transformers)
+**The Problem:** Detecting nuance and irony in news headlines to prevent the erosion of reader trust.
+**The Solution:** Fine-tuned a **DistilBERT** transformer model using the HuggingFace `transformers` ecosystem. We utilized stratified sampling to handle class balance and achieved high inference speeds without sacrificing precision.
+**The Impact:** **91.37% accuracy** on unseen headlines. [📽️ View Demo Video](demos/Sarcasm%20Detector%20(DistilBERT).webm)
 
 ---
 
-## Setup (Google Colab)
+## 🛠️ Engineering Standards
 
-All exercises run on **Google Colab with a T4 GPU**.
-
-**Runtime → Change runtime type → T4 GPU**
-
-For Kaggle dataset downloads:
-```python
-from google.colab import files
-files.upload()  # upload your kaggle.json
-!mkdir -p ~/.kaggle && mv kaggle.json ~/.kaggle/ && chmod 600 ~/.kaggle/kaggle.json
-```
+- **Data Integrity:** Every model was validated using a rigorous Train/Validation/Test split (typically 70/15/15).
+- **Inference Ready:** All notebooks include a `Gradio` or `PIL` based live inference demo.
+- **Reproducibility:** Master configurations (LR, Batch Size, Seeds) are clearly defined at the top of every notebook.
 
 ---
 
-## Getting Unstuck
+*SAIR PyTorch Mastery Course — Final Portfolio Project*  
+🔗 **Course Origin:** [SAIR Junior Program](https://github.com/SAIR-Org/SAIR_Jr)
 
-If you're stuck, work through this checklist before asking for help:
-
-1. **Data** — Did you check class distribution? Is there severe imbalance?
-2. **Shapes** — Print `X.shape`, `y.shape`, and the first batch from your DataLoader
-3. **Loss** — Is the initial loss close to `−log(1/n_classes)`? If not, check your output layer
-4. **Overfitting** — Is train accuracy high but val accuracy low? Add dropout or data augmentation
-5. **Underfitting** — Is both train and val accuracy low? Increase model capacity or train longer
-6. **Learning rate** — If loss oscillates wildly, divide `lr` by 10. If it doesn't move, multiply by 10
-
-Still stuck? Post in the [SAIR Telegram community](https://t.me/+jPPlO6ZFDbtlYzU0) with your loss curves and a code snippet.
-
----
-
-*SAIR PyTorch Mastery Course — Classification Hub*
