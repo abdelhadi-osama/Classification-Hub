@@ -8,8 +8,12 @@
 
 ---
 
+
+https://github.com/user-attachments/assets/b8488a43-2d6e-4609-8b42-dbca297cab09
+
+
 ## 📺 Master Project Showcase
-[![Watch the Master Demo](https://img.shields.io/badge/📽️_Master_Showcase-Play_Video-blue?style=for-the-badge&logo=youtube)](demos/Master_Classification_Hub_Demo.mp4)
+[![Watch the Master Demo]
 *A consolidated 60-second tour of all live inference demos in this portfolio.*
 
 ---
